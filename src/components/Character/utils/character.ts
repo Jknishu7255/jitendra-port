@@ -10,12 +10,12 @@ const setCharacter = (
 ) => {
   const loader = new GLTFLoader();
   const dracoLoader = new DRACOLoader();
-  dracoLoader.setDecoderPath("/draco/");
+  dracoLoader.setDecoderPath(import.meta.env.BASE_URL + "draco/");
   loader.setDRACOLoader(dracoLoader);
 
   const loadCharacter = () => {
     return new Promise<GLTF | null>((resolve, reject) => {
-      decryptFile("/models/character.enc?v=2", "MyCharacter12")
+      decryptFile(import.meta.env.BASE_URL + "models/character.enc?v=2", "MyCharacter12")
         .then((encryptedBlob) => {
           const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
 
