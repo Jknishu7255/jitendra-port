@@ -8,13 +8,13 @@ const projects = [
     title: "Basic Web Page",
     category: "Web Development",
     tools: "HTML, CSS",
-    image: "/images/Solidx.png",
+    image: import.meta.env.BASE_URL + "images/Solidx.png",
   },
   {
     title: "C Mini Projects",
     category: "Programming",
     tools: "C, C++",
-    image: "/images/radix.png",
+    image: import.meta.env.BASE_URL + "images/radix.png",
   },
 ];
 
